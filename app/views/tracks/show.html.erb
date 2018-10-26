@@ -73,7 +73,7 @@ btStart = document.getElementById( 'btStartAudioVisualization' );
 btStart.addEventListener( 'mousedown', userStart, false );
 
 txtStatus = document.getElementById( 'txtStatus' );
-txtStatus.innerHTML = 'Waiting Patiently For You... Please Click the Start Button.';
+txtStatus.innerHTML = 'Нажмите кнопку "Старт';
 
 };
 
@@ -85,9 +85,9 @@ function userStart() {
 btStart.removeEventListener( 'mousedown', userStart );
 
 btStart.addEventListener( 'mousedown', audioBtHandler, false );
-btStart.innerHTML = 'Pause Audio';
+btStart.innerHTML = 'Пауза';
 
-txtStatus.innerHTML = 'Loading Audio...';
+txtStatus.innerHTML = 'Идёт загрузка';
 
 audioSetup();
 animate();
@@ -353,13 +353,13 @@ if ( audio.paused ) {
 
   audio.play();
 
-  btStart.innerHTML = 'Pause Audio';
+  btStart.innerHTML = 'Пауза';
 
 } else {
 
   audio.pause();
 
-  btStart.innerHTML = 'Play Audio';
+  btStart.innerHTML = 'Старт';
 
 }
 
@@ -634,7 +634,7 @@ init();
 </script>
 
 
-<a id="btStartAudioVisualization" class="bt">Start Audio Visualization</a>
+<a id="btStartAudioVisualization" class="bt">Старт</a>
 <p id="txtStatus"></p>
 
 <!-- <p>
